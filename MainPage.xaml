@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Logintest.Views.MainPage"
+             Title="{Binding Title}">
+    <StackLayout BackgroundColor="LightGray" Padding="10">
+        <Label Text="Welcome" TextColor="Black" FontSize="50" FontAttributes="Bold" HorizontalOptions="Center" TextDecorations="Underline" Margin="0,90,0,0"/>
+        <StackLayout BackgroundColor="LightGray" Padding="10" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Frame BackgroundColor="Linen">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+                    <!--<Entry x:Name="entryuser" Placeholder="Username" Grid.Row="0"/>
+                <Entry x:Name="entrypassword" Placeholder="Password" Grid.Row="1"/>-->
+                    <Button Text="Login" Grid.Row="0" Clicked="Button_Clicked" BackgroundColor="#0077be"/>
+                    <Button Text="Signup" Grid.Row="1"  BackgroundColor="RosyBrown" TextColor="Black" Clicked="Button_Clicked_1"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+
+    </StackLayout>
+
+   
+</ContentPage>

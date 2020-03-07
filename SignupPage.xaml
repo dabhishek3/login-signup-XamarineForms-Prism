@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Logintest.Views.SignupPage">
+    <StackLayout BackgroundColor="LightGray" Padding="10">
+        <Label Text="Signup Page" TextColor="Black" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" TextDecorations="Underline"/>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Frame Padding="5" BackgroundColor="LightCyan">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+                    <Entry x:Name="entryuser" Placeholder="username" Grid.Row="0"/>
+                    <Entry x:Name="entryname" Placeholder="name" Grid.Row="1"/>
+                    <Entry x:Name="entryphone" Placeholder="phone" Grid.Row="2"/>
+                    <Entry x:Name="entryemail" Placeholder="email" Grid.Row="3"/>
+                    <Entry x:Name="entryaddress" Placeholder="address" Grid.Row="4"/>
+                    <Entry x:Name="entrypassword" Placeholder="password" IsPassword="True" Grid.Row="5"/>
+                    <Button Text="Signup" Grid.Row="6" Clicked="Button_Clicked" BackgroundColor="#0077be"/>
+
+                </Grid>
+            </Frame>
+        </StackLayout>
+
+    </StackLayout>
+   
+</ContentPage>

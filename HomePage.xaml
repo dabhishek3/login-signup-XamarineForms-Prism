@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Logintest.Views.HomePage">
+
+    <StackLayout BackgroundColor="LightGray" Padding="10">
+        <Label Text="Welcome" FontSize="40" TextColor="Brown" FontAttributes="Bold" HorizontalOptions="Center" TextDecorations="Underline"/>
+        <ListView x:Name="listUser" HasUnevenRows="True" IsVisible="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="2,2,2,2" HorizontalOptions="Center">
+                            <!--<Label Text="{Binding userName}" FontAttributes="Bold" TextColor="Black" FontSize="16"/>-->
+                            <Label Text="{Binding name}" FontAttributes="Bold" TextColor="Blue" FontSize="22"/>
+                            <Label Text="{Binding phone}" FontSize="12"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Logout" FontSize="15" FontAttributes="Bold" BackgroundColor="LemonChiffon" Clicked="Button_Clicked"/>
+        <Button Text="Add Quotes" FontSize="15" x:Name="Add" FontAttributes="Bold" BackgroundColor="YellowGreen" Clicked="Add_Clicked"/>
+        <Button Text="See Quotes" FontSize="15" x:Name="See" FontAttributes="Bold" BackgroundColor="#0077be" Clicked="See_Clicked"/>
+        <ListView x:Name="Datalist" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding type}" TextColor="Red" FontAttributes="Bold" FontSize="18"/>
+                            <Label Text="{Binding Quotes}" TextColor="Black" FontAttributes="Italic" FontSize="12" />
+                           
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+   
+</ContentPage>

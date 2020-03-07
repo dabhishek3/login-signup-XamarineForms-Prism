@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Logintest.Views.AddPage">
+
+    <StackLayout BackgroundColor="LightGray" Padding="10">
+        <Frame BackgroundColor="RosyBrown">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Feelings to add" TextColor="Black" FontSize="28" FontAttributes="Italic" Margin="0,13,0,0" Grid.Row="0" Grid.Column="0"
+                   Grid.ColumnSpan="2" HorizontalOptions="Center" TextDecorations="Underline"/>
+                <Label Text="Type Of Quotes" TextColor="Black" FontSize="18" FontAttributes="Italic" Margin="0,9,0,0" Grid.Row="1" Grid.Column="0"
+                   Grid.ColumnSpan="2" HorizontalOptions="Center" TextDecorations="Underline"/>
+                <Frame Grid.Row="2" Grid.Column="0"
+                   Grid.ColumnSpan="2" BackgroundColor="LightGray">
+                    <Picker x:Name="myPicker" Title="Select:" >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Happy</x:String>
+                                <x:String>Sad</x:String>
+                                <x:String>Emotional</x:String>
+                                <x:String>Motivated</x:String>
+                                <x:String>Inspired</x:String>
+                                <x:String>Anger</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </Frame>
+                <Label Text="Your Quotes" TextColor="Black" FontSize="18" FontAttributes="Italic" Margin="0,9,0,0" Grid.Row="3" Grid.Column="0"
+                   Grid.ColumnSpan="2" HorizontalOptions="Center" TextDecorations="Underline"/>
+                <Frame  Grid.Row="4" Grid.Column="0"
+                   Grid.ColumnSpan="2" BackgroundColor="LightGray">
+                    <Editor x:Name="Quotes" TextColor="Red" FontSize="15"/>
+                </Frame>
+
+            </Grid>
+
+        </Frame>
+        <Button x:Name="Save" Text="Save" BackgroundColor="Tomato" Clicked="Save_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
